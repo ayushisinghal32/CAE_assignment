@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "3eb8b0c4-beb2-4b61-9848-b0d9c63c96bf",
+		"name": "Air line",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25379909",
+		"_collection_link": "https://ottocar.postman.co/workspace/Team-Workspace~fd205ae7-22ce-40a5-8e94-91bc9557cb12/collection/25379909-3eb8b0c4-beb2-4b61-9848-b0d9c63c96bf?action=share&source=collection_link&creator=25379909"
+	},
+	"item": [
+		{
+			"name": "upload-roster",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "roster_file",
+							"type": "file",
+							"src": "/Users/fazalpasha/Downloads/CAE Laravel Assignment/Roster - CrewConnex.html"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/upload-roster?roster_file",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload-roster"
+					],
+					"query": [
+						{
+							"key": "roster_file",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "upload-roster",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "roster_file",
+									"type": "file",
+									"src": "/Users/fazalpasha/Downloads/CAE Laravel Assignment/Roster - CrewConnex.html"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/upload-roster?roster_file",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"upload-roster"
+							],
+							"query": [
+								{
+									"key": "roster_file",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 09:57:20 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 09:57:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Roster uploaded successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "All Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/events",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Events",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/events",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 10:19:19 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 10:19:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 162,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 163,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 164,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 165,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 166,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 167,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 168,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 169,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 170,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-12 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 171,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-13 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 172,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-14 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 173,\n        \"type\": \"Standby\",\n        \"start_time\": \"2022-01-15 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 174,\n        \"type\": \"Standby\",\n        \"start_time\": \"2022-01-16 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 175,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 176,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 177,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 178,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 179,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-18 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 180,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-19 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 181,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX73\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 182,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX74\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 183,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 184,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 185,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX73\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 186,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX74\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 187,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 188,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 189,\n        \"type\": \"CAR\",\n        \"start_time\": \"2022-01-22 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 190,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-22 00:00:00\",\n        \"flight_number\": \"DX21\",\n        \"location\": \"EBJ\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 191,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-22 00:00:00\",\n        \"flight_number\": \"DX22\",\n        \"location\": \"SVG\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 192,\n        \"type\": \"CAR\",\n        \"start_time\": \"2022-01-22 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"EBJ\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 193,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX79\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 194,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 195,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX85\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 196,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX86\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    }\n]"
+				},
+				{
+					"name": "All Events with dates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"start_date\":\"2022-01-10\",\n    \"end_date\":\"2022-01-20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/events",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 13:39:34 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 13:39:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 162,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 163,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 164,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 165,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 166,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 167,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 168,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 169,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 170,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-12 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 171,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-13 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 172,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-14 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 173,\n        \"type\": \"Standby\",\n        \"start_time\": \"2022-01-15 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 174,\n        \"type\": \"Standby\",\n        \"start_time\": \"2022-01-16 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 175,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 176,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 177,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 178,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 179,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-18 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 180,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-19 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 181,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX73\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 182,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX74\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 183,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 184,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "flights-next-week",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/flights-next-week",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"flights-next-week"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "flights-next-week",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/flights-next-week",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"flights-next-week"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 13:42:58 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 13:42:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 175,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 176,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 177,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 178,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 181,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX73\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 182,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX74\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 183,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 184,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 185,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX73\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 186,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX74\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 187,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 188,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX80\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 190,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-22 00:00:00\",\n        \"flight_number\": \"DX21\",\n        \"location\": \"EBJ\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 191,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-22 00:00:00\",\n        \"flight_number\": \"DX22\",\n        \"location\": \"SVG\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 193,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX79\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 194,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX82\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 195,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX85\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 196,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX86\",\n        \"location\": \"CPH\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "standby-next-week",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/standby-next-week",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"standby-next-week"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "standby-next-week",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/standby-next-week",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"standby-next-week"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 13:51:39 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 13:51:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No Stand By Flight\"\n}"
+				}
+			]
+		},
+		{
+			"name": "flights-from-location",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"location\":\"KRP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/flights-from-location",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"flights-from-location"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "flights-from-location",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location\":\"KRP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/flights-from-location",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"flights-from-location"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 10:28:29 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Mar 2024 10:28:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 162,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 164,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-10 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 166,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 168,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-11 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 170,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-12 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 171,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-13 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 172,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-14 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 173,\n        \"type\": \"Standby\",\n        \"start_time\": \"2022-01-15 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 174,\n        \"type\": \"Standby\",\n        \"start_time\": \"2022-01-16 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 175,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 177,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-17 00:00:00\",\n        \"flight_number\": \"DX83\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 179,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-18 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 180,\n        \"type\": \"Day-Off\",\n        \"start_time\": \"2022-01-19 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 181,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX73\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 183,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-20 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 185,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX73\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 187,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-21 00:00:00\",\n        \"flight_number\": \"DX77\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 189,\n        \"type\": \"CAR\",\n        \"start_time\": \"2022-01-22 00:00:00\",\n        \"flight_number\": null,\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 193,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX79\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    },\n    {\n        \"id\": 195,\n        \"type\": \"Flight\",\n        \"start_time\": \"2022-01-23 00:00:00\",\n        \"flight_number\": \"DX85\",\n        \"location\": \"KRP\",\n        \"created_at\": \"2024-03-27T09:57:20.000000Z\",\n        \"updated_at\": \"2024-03-27T09:57:20.000000Z\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
